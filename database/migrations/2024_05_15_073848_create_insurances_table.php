@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('insurances', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('applicant_id')->constrained('applicants')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('company_id')->constrained('companies')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('insurance_number');
             $table->timestamps();
         });
     }

@@ -19,5 +19,10 @@ class Company extends Model
     {
         return $this->hasOne(Magang::class);
     }
+
+    public function insurance()
+    {
+        return $this->hasOne(Insurance::class);
+    }
 }
 
