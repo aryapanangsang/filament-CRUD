@@ -25,4 +25,9 @@ class Insurance extends Model
     {
         return $this->belongsTo(Company::class);
     }
+
+    public function magang()
+    {
+        return $this->belongsTo(Magang::class);
+    }
 }

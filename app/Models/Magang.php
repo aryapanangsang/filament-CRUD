@@ -24,6 +24,11 @@ class Magang extends Model
 
     public function company()
     {
-        return $this->belongsTO(Company::class);
+        return $this->belongsTo(Company::class);
+    }
+
+    public function insurance()
+    {
+        return $this->belongsTo(Insurance::class);
     }
 }
